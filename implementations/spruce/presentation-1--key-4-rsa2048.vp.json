@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "urn:uuid:789",
+  "type": [
+    "VerifiablePresentation"
+  ],
+  "verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        {
+          "@vocab": "https://example.com/#"
+        }
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
+      "credentialSubject": {
+        "id": "did:example:456"
+      },
+      "issuer": "did:example:123",
+      "issuanceDate": "2021-01-01T19:23:24Z",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:example:123#key-0",
+        "created": "2021-10-02T17:58:00Z",
+        "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..VA8VQqAerUT6AIVdHc8W8Q2aj12LOQjV_VZ1e134NU9Q20eBsNySPjNdmTWp2HkdquCnbRhBHxIbNeFEIOOhAg"
+      },
+      "evidence": [
+        {
+          "id": "https://example.edu/evidence/f2aeec97-fc0d-42bf-8ca7-0548192d4231",
+          "type": [
+            "DocumentVerification"
+          ],
+          "documentPresence": "Physical",
+          "verifier": "https://example.edu/issuers/14",
+          "subjectPresence": "Physical",
+          "evidenceDocument": "DriversLicense"
+        },
+        {
+          "id": "https://example.edu/evidence/f2aeec97-fc0d-42bf-8ca7-0548192dxyzab",
+          "type": [
+            "SupportingActivity"
+          ],
+          "verifier": "https://example.edu/issuers/14",
+          "evidenceDocument": "Fluid Dynamics Focus",
+          "documentPresence": "Digital",
+          "subjectPresence": "Digital"
+        }
+      ]
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "proofPurpose": "authentication",
+    "challenge": "123",
+    "verificationMethod": "did:example:123#key-4",
+    "created": "2021-12-04T21:01:36.417Z",
+    "jws": "eyJhbGciOiJQUzI1NiIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..DQN_Ik8IggZtnUgvdPE7-iZ9TbDHws2-Ha_OCYWvLDBIttLzq_CdJGxSYj1DsQB1oui8rmAvARZ6AZnFB-Rs5e-HXUcyXI7-hTdpqNogN6k1NNApWaUY7sjsD0fWM2uh9tBHQi1YY17gCKoXkvds4cXgIq0LHePZWGKf37ewr9k50DiiRXY1QM73kff5PSTDs1_aVCUNsQT0QCORpASXIeLVTp5iEgFsGOMDb5PT_jHWCW_qm0ED12dHAPwJdw3IfJCCd2gbD8bYw86LBDmT2HtGK21eVoag3zYsoh77Lh4SOV9_errtKUaLANRhCnUIbcJysqCxQb_siKdjzz6AFA"
+  },
+  "holder": "did:example:123"
+}
